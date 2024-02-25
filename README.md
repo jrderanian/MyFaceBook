@@ -45,5 +45,5 @@ https://www.hackingwithswift.com/samples/friendface.json
     },
     
     Mutliple problems with database crashing after changes to class, now I know how to delete them and let the app regen.
-    The cookier cutter iso8601 date json conversion did not work either
+    The cookier cutter iso8601 date json conversion did not work either.  Fortunately, I found a real extension to do the trick.
     
