@@ -13,12 +13,14 @@ struct ListContentView: View {
     
     @Query var users: [User]
        
+    @State private var path = NavigationPath()
+    
     init(sortOrder: [SortDescriptor<User>] ) {
         _users = Query(sort: sortOrder)
     }
     
         var body: some View {
-            NavigationStack {
+            NavigationStack(path: $path) {
                 ScrollView {
                     VStack {
                         ForEach(users) { user in
@@ -33,7 +35,7 @@ struct ListContentView: View {
                     .navigationTitle("MyFaceBook")
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationDestination(for: User.self) { user in
-                        UserDetailView(user: user)
+                        UserDetailView(user: user, path: $path)
                     }
                     
                 }

@@ -13,6 +13,7 @@ struct UserDetailView: View {
     var user: User
     @Query var users: [User]
     @Environment(\.modelContext) var modelContext
+    @Binding var path: NavigationPath
     
     var body: some View {
         
@@ -43,6 +44,17 @@ struct UserDetailView: View {
         }
         .navigationTitle("Edit User")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                
+                Button("\(Image(systemName: "house"))")  {
+                    
+                    path = NavigationPath()
+                    
+                }
+            }
+            
+        }
         
     }
 }
