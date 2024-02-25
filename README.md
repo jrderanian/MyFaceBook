@@ -43,3 +43,6 @@ https://www.hackingwithswift.com/samples/friendface.json
             }
         ]
     },
+    
+    Mutliple problems with database crashing after changes to class, now I know how to delete them and let the app regen.
+    
